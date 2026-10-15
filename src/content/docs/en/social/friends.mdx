@@ -1,24 +1,42 @@
 ---
 title: Adding friends
-description: Finding classmates, what friends can see, and how to stay unsearchable.
+description: Finding and adding classmates, what friends can see, and the per-friend notes, pins and blocking.
 ---
 
 import Shot from '@/components/Shot.astro';
-import { Aside } from '@astrojs/starlight/components';
+import { Aside, Steps } from '@astrojs/starlight/components';
 
 ## Finding people
 
-Search by username. Everyone's profile lives at `/people/<username>`.
+Search needs **at least 2 characters** before it runs. Everyone's profile lives at
+`/people/<username>`.
 
 <Aside type="note">
-Only people who have "discoverable" switched on appear in search. It is on by
-default — turn it off to stay hidden. See [Visibility settings](/en/privacy/visibility/).
+Only people with "discoverable" switched on appear in search. It is on by default —
+turn it off to stay hidden. See [Visibility settings](/en/privacy/visibility/).
 </Aside>
+
+## Sending a request
+
+<Steps>
+
+1. **Send a request by email or username.**
+
+   Either works, and a leading `@` on a username is stripped automatically.
+
+2. **Wait for them to accept.**
+
+   Friendship is **mutual**. They get a friend request notification, and until they
+   accept you are not friends and neither of you can see the other's schedule.
+
+3. **They accept or decline.**
+
+</Steps>
 
 <Shot
   id="social-friends-01"
-  caption="Searching for and adding a friend"
-  alt="The people search interface in RUFREE"
+  caption="Searching for someone and sending a friend request"
+  alt="The people search and add-friend interface in RUFREE"
 />
 
 ## What friends can see
@@ -39,6 +57,31 @@ turned course details off.
 
 ## Shared free time
 
-Once you are friends you can see the free time you have in common. This uses only
-the busy/free layer, so **it still works when every event is set to "Busy" with no
-details.**
+Once you are friends you can see the free time you have in common. This uses only the
+busy/free layer, so **it still works when every event is set to "Busy" with no details.**
+
+The exception is "Private": those events do not count as busy, so others may read that
+time as free.
+
+## Managing a friend
+
+Each friend has these settings. They are **yours alone — the other person cannot see them**:
+
+| Feature | What it does |
+| --- | --- |
+| Note | A private name for this person, visible only to you |
+| Pin | Keeps the people you check often at the top |
+| Birthday | Record their birthday, optionally with a reminder |
+| Watch schedule | Notifies you when their timetable changes |
+
+<Aside type="caution">
+Notes and birthdays are your own records. They are never synced to the other person
+and never change their profile.
+</Aside>
+
+## Blocking and removing
+
+- **Block** cuts off contact and can be undone later
+- **Remove** ends the friendship
+
+Either way they stop seeing anything you marked "Friends".
