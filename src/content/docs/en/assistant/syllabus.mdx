@@ -1,0 +1,76 @@
+---
+title: Uploading a syllabus
+description: Supported formats and size, what you need first, and how syllabus versions work.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Upload a course syllabus and Assistant pulls out exams, assignments and deadlines as
+a **draft** for you to review.
+
+<Aside type="caution">
+Assistant **does not change your calendar**. Every item has to be confirmed by you.
+See [Reviewing drafts](/en/assistant/review/).
+</Aside>
+
+## What you need first
+
+The term must already have an **active timetable**. Without one you cannot upload,
+because Assistant needs the timetable to tell which course and term this is.
+
+## Formats and size
+
+| | |
+| --- | --- |
+| Formats | PDF, DOCX, DOC, XLSX, TXT, MD, CSV |
+| Maximum size | 8 MB per file |
+
+Anything larger is rejected outright. Scanned PDFs with no text layer often yield
+nothing — use a text-based version if you have one.
+
+## Steps
+
+<Steps>
+
+1. **Open the materials page and pick the term and course.**
+
+2. **Upload the syllabus.**
+
+   <Shot
+     id="assistant-syllabus-01"
+     caption="The syllabus upload entry point"
+     alt="The syllabus upload interface on the RUFREE materials page"
+   />
+
+3. **Wait for the analysis.**
+
+   The file moves through uploaded → analyzing → analyzed. It takes a moment, so feel
+   free to do something else.
+
+   <Shot
+     id="assistant-syllabus-02"
+     caption="Analysis status for a syllabus"
+     alt="RUFREE showing the analysis progress of a syllabus file"
+   />
+
+4. **Review the draft it produced.**
+
+</Steps>
+
+## Versions
+
+A course can have several syllabus uploads, numbered as versions. If the course
+publishes an updated syllabus, upload the new one; the old version is kept.
+
+Uploading a **byte-identical** file again does not create a new version.
+
+## When extraction fails
+
+If no text can be read, the status stops at failed with a reason. Common causes:
+
+- a scan or image-only PDF
+- an encrypted or password-protected file
+- a corrupted file
+
+In that case, add the events by hand instead.

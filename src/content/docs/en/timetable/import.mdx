@@ -1,0 +1,65 @@
+---
+title: Importing your timetable
+description: Export an .ics file from your school's schedule system, import it, and check the two things that most often go wrong.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Your timetable is the foundation. Shared free time, course feeds and syllabus
+analysis all depend on it.
+
+## Steps
+
+<Steps>
+
+1. **Export an `.ics` file from your school's schedule system.**
+
+   <Shot
+     id="timetable-import-01"
+     caption="Where to export .ics in the school's schedule system"
+     alt="The calendar export button in the school's schedule system"
+   />
+
+2. **Open the Timetable page in RUFREE, pick the term, and upload the file.**
+
+   Picking the right term matters: RUFREE keeps only the meetings that **fall inside
+   that term's date range**. If nothing matches you get "no meetings from this term
+   were found", which almost always means the wrong term was selected.
+
+3. **Review the differences.**
+
+   If the term already has a timetable, RUFREE shows you what is added, changed or
+   gone before anything is saved.
+
+   <Shot
+     id="timetable-import-02"
+     caption="The difference between the new file and your current timetable"
+     alt="RUFREE showing the difference between an imported timetable and the current one"
+   />
+
+4. **Save, and choose whether to activate it.**
+
+   If you do not activate it, the version is archived and you can switch to it later.
+
+</Steps>
+
+## Two things to check afterwards
+
+<Aside type="caution">
+- **Time zone.** Your account defaults to `America/Toronto`. If every class is off by
+  the same few hours, fix the time zone in settings rather than editing classes.
+- **Repeats and exceptions.** Recurring classes and exceptions such as cancellations
+  are expanded into individual meetings. Spot-check a few weeks, especially around
+  Reading Week.
+</Aside>
+
+## How much fits in one import
+
+A single version holds at most 5000 events. A normal term is nowhere near that, so
+hitting the limit usually means the export covered every term instead of one.
+
+## Events you add by hand
+
+Manual events are stored separately from imported classes. **Re-importing your
+timetable does not touch them**, and they do not change when you switch versions.

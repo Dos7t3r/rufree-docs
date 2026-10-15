@@ -1,0 +1,42 @@
+---
+title: 课程资料库
+description: 上传的课程资料存在哪里、谁能看到，以及容量限制。
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+除了 syllabus，你还可以上传其他课程资料，之后可以针对这些内容提问。
+
+## 支持的格式和大小
+
+和 syllabus 一样：PDF、DOCX、DOC、XLSX、TXT、MD、CSV，单个文件 8 MB 以内。
+
+## 谁能看到
+
+<Aside type="caution">
+上传的资料默认只有你自己能看到。如果你选择共享某份资料，
+同课的同学就能看到它——共享前请确认文件里没有你的个人信息
+（比如写了名字和学号的作业）。
+</Aside>
+
+<Shot
+  id="assistant-materials-01"
+  caption="资料库列表与共享状态"
+  alt="RUFREE 课程资料库的文件列表"
+/>
+
+## 容量限制
+
+资料库有总量上限。接近上限时上传会被拒绝并提示，
+这时需要先删掉一些不再需要的文件。
+
+## 删除
+
+资料可以随时删除。已经共享出去的资料删除后，同学也看不到了。
+
+<Shot
+  id="assistant-materials-02"
+  caption="针对课程资料提问"
+  alt="RUFREE 中基于课程资料的问答界面"
+/>

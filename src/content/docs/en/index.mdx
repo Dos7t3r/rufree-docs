@@ -1,0 +1,46 @@
+---
+title: RUFREE Docs
+description: How RUFREE works — importing your timetable, subscribing to course feeds, sharing free time with classmates, and what each feature reveals.
+template: splash
+hero:
+  tagline: Manage your classes, connect with classmates, find shared free time. This is what each feature does, and what it makes visible.
+  actions:
+    - text: What is RUFREE
+      link: /en/start/what-is-rufree/
+      icon: right-arrow
+      variant: primary
+    - text: Open RUFREE
+      link: https://rufree.app
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Start with your timetable" icon="calendar">
+    Almost everything else depends on it. Export an `.ics` file from your school's
+    schedule system and import it; versions are kept per term.
+    See [Importing your timetable](/en/timetable/import/).
+  </Card>
+  <Card title="Subscribe to course feeds" icon="rss">
+    Paste a course's Quercus Announcements RSS link and RUFREE reads the posts,
+    looking for exam times and rooms.
+    See [Subscribing to a course feed](/en/feeds/subscribe/).
+  </Card>
+  <Card title="Know who sees what" icon="setting">
+    Every event has its own visibility, and your account has a second set of switches
+    on top. Read [Visibility settings](/en/privacy/visibility/) before you share.
+  </Card>
+  <Card title="Assistant never edits your calendar" icon="approve-check">
+    A syllabus produces a **draft**. Nothing reaches your calendar until you approve
+    it item by item. See [Reviewing drafts](/en/assistant/review/).
+  </Card>
+</CardGrid>
+
+## What this documentation covers
+
+How each feature works and what information it exposes. It does not cover
+implementation details, algorithms, keys, or internal configuration.
+
+RUFREE is an independent project, not an official University of Toronto service.

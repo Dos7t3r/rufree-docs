@@ -1,0 +1,42 @@
+---
+title: Accounts and sign-in
+description: Username rules, how signing in works, and which profile fields other people can see.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+## Usernames
+
+Your username is your public handle; your profile lives at `/people/<username>`.
+
+The rules: **3 to 24 characters, lowercase letters, digits and underscores only**
+(`a-z`, `0-9`, `_`). Usernames are unique, so saving fails if one is already taken.
+
+## Signing in
+
+The web app supports email code sign-in. The Windows, macOS and Android apps and the
+web app **share one account**, so your timetable, friends and settings follow you
+without setting anything up again on each device.
+
+## What is in your profile
+
+Display name, username, avatar, calendar colour, campus, major, year of study,
+birthday, bio and a status line.
+
+<Aside type="note">
+These are not all public. Who sees what is governed by the switches in
+[Visibility settings](/en/privacy/visibility/) — including one that controls whether
+you can be found by search at all.
+</Aside>
+
+<Shot
+  id="account-profile-01"
+  caption="The profile page, and where username and campus are set"
+  alt="RUFREE profile settings page"
+/>
+
+## First run
+
+The first time you sign in there is a short setup step (username, campus and so on).
+Until it is finished, opening settings takes you back to it.

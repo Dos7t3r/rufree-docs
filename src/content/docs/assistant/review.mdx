@@ -1,0 +1,57 @@
+---
+title: 审核草稿
+description: Assistant 生成的条目需要你逐条确认才会进入日历。
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+这是整个 Assistant 流程里最重要的一步。
+
+<Aside type="caution" title="日历不会被自动修改">
+Assistant 从 syllabus 里读到的所有内容都是**草稿**。
+只有你确认过的条目才会写进日历。
+</Aside>
+
+## 草稿里有什么
+
+每条草稿包含类型、标题、时间，以及**它是从 syllabus 哪一段读出来的**。
+这个来源信息是给你核对用的——有疑问时先看原文。
+
+四种类型：
+
+| 类型 | 说明 |
+| --- | --- |
+| 考试 | Midterm、Final 等 |
+| 作业 | Assignment、Project |
+| 截止日期 | Due date |
+| 课程要求 | 不带具体日期的要求，仅作记录 |
+
+<Shot
+  id="assistant-review-01"
+  caption="待审核的草稿列表，每条都附带 syllabus 原文出处"
+  alt="RUFREE 显示 Assistant 从 syllabus 生成的待审核条目"
+/>
+
+## 审核时要核对什么
+
+逐条检查这三样，它们是最容易出错的：
+
+1. **日期** —— 尤其是只写了「Week 8」这类相对时间的条目
+2. **课程** —— 确认挂到了正确的课上
+3. **时区** —— syllabus 上的时间通常不写时区
+
+<Shot
+  id="assistant-review-02"
+  caption="单条草稿的确认与修改"
+  alt="RUFREE 草稿条目的编辑和确认界面"
+/>
+
+## 确认之后
+
+确认的条目会按类型进入日历，成为考试、作业或截止日期。
+它们和手动添加的事件一样，之后可以编辑或删除。
+
+## 没确认的条目
+
+不确认就不会进日历。你可以放着不管，也可以直接删掉。

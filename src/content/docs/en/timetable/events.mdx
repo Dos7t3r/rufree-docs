@@ -1,0 +1,58 @@
+---
+title: Events and categories
+description: The five kinds of event, where each comes from, and the visibility each one carries.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+## Five categories
+
+Every event in the calendar is one of these:
+
+| Category | What it is | Usually from |
+| --- | --- | --- |
+| Class | A normal class meeting | Your imported timetable |
+| Exam | An exam | Syllabus drafts, course feeds |
+| Assignment | An assignment | Syllabus drafts |
+| Due date | A deadline | Syllabus drafts |
+| Event | Something personal | Added by you |
+
+Without an explicit category, RUFREE infers one from the source: manual events become
+"Event", imported ones become "Class".
+
+<Shot
+  id="timetable-events-01"
+  caption="Different event categories in the calendar"
+  alt="RUFREE calendar showing classes, exams and personal events"
+/>
+
+## Visibility is per event
+
+**Each event carries its own visibility**, one of four:
+
+| Visibility | What others see |
+| --- | --- |
+| Private | Nothing at all; the time does not even show as busy |
+| Busy | Just "busy" — no title, no location, no details |
+| Friends | Friends can see the details |
+| Groups | Members of your groups can see the details |
+
+New events take your account's **default visibility**, which you can then change per
+event. The default lives in settings — see [Visibility settings](/en/privacy/visibility/).
+
+<Aside type="caution">
+Changing the default does not apply retroactively. To make an existing timetable
+private you have to change it on the timetable, not just flip the default.
+</Aside>
+
+<Shot
+  id="timetable-events-02"
+  caption="Choosing visibility for a single event"
+  alt="The visibility options in the event editing panel"
+/>
+
+## Editing and deleting
+
+**Only manual events can be edited or deleted.** Imported classes belong to a
+timetable version, so changing them means re-importing or switching versions.

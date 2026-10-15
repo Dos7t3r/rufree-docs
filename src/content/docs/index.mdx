@@ -1,0 +1,43 @@
+---
+title: RUFREE 使用手册
+description: RUFREE 的功能说明：导入课表、订阅课程通知、与同学共享空闲时间，以及这些功能各自会公开什么。
+template: splash
+hero:
+  tagline: 管理课程、连接同学、找到共同空闲。这里讲清楚每个功能怎么用，以及它会公开什么。
+  actions:
+    - text: RUFREE 是什么
+      link: /start/what-is-rufree/
+      icon: right-arrow
+      variant: primary
+    - text: 打开 RUFREE
+      link: https://rufree.app
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="先导入课表" icon="calendar">
+    几乎所有功能都以课表为前提。从学校课表系统导出 `.ics` 再导入，
+    课表会按学期保存版本。见[导入课表](/timetable/import/)。
+  </Card>
+  <Card title="订阅课程通知" icon="rss">
+    贴入 Quercus 课程通知的 RSS 链接，RUFREE 会读取通知并尝试找出考试时间和考场。
+    见[订阅课程通知](/feeds/subscribe/)。
+  </Card>
+  <Card title="搞清楚谁能看见什么" icon="setting">
+    每个事件都有独立的可见性，账号另有一组总开关。
+    开始共享前请先读[可见性设置](/privacy/visibility/)。
+  </Card>
+  <Card title="Assistant 不会直接改你的日历" icon="approve-check">
+    上传 syllabus 后它生成的是**草稿**，需要你逐条审核后才会写入。
+    见[审核草稿](/assistant/review/)。
+  </Card>
+</CardGrid>
+
+## 这份文档的范围
+
+这里只讲功能怎么用、以及每个功能会公开哪些信息。它不包含实现细节、算法、密钥或任何内部配置。
+
+RUFREE 是独立项目，不是多伦多大学的官方服务。

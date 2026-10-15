@@ -1,0 +1,55 @@
+---
+title: Your data
+description: What RUFREE stores about you, and how to delete it.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## What is stored
+
+| Category | Contents |
+| --- | --- |
+| Account | Username, display name, avatar, campus, time zone, language |
+| Timetable | Imported versions and manually added events |
+| Course feeds | Subscription settings and the posts that were read |
+| Materials | Uploaded syllabi and materials, and the text extracted from them |
+| Social | Friendships and group memberships |
+| Subscription links | A calendar link's name, scope and expiry |
+
+## How to delete things
+
+| To remove | Do this |
+| --- | --- |
+| A manual event | Delete it in the calendar |
+| A timetable version | Delete it in the version list |
+| A course feed | Remove the subscription under that course |
+| A syllabus or material | Delete it in the materials library |
+| A calendar subscription link | Revoke it |
+| A group | Leave it |
+
+<Aside type="caution">
+Removing a course feed sends exam times it had set back to the syllabus or ACORN
+time, rather than leaving them as they were.
+</Aside>
+
+## Calendar subscription links
+
+RUFREE **does not store the link itself**, only a fingerprint of it. That means:
+
+- a lost link cannot be recovered, only revoked and replaced
+- but it also means the link cannot be read back out of the database
+
+## Deleting your account
+
+To delete an account entirely, get in touch through the
+[feedback channel](https://github.com/Dos7t3r/RUFREE-UPDATEs).
+
+<Aside type="caution">
+When reporting anything publicly, **do not attach** verification codes, calendar
+subscription links, Quercus feed links or full timetable screenshots.
+</Aside>
+
+## Reporting problems
+
+Release notes and issue reports both live in the public
+[RUFREE-UPDATEs](https://github.com/Dos7t3r/RUFREE-UPDATEs) repository.

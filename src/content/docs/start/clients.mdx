@@ -1,0 +1,35 @@
+---
+title: 各平台客户端
+description: 网页版、Windows、macOS、Android 客户端，以及 iPhone 上的使用方式。
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+所有客户端共用一个账号。你在哪个端改了课表，其他端都会同步。
+
+## 可下载的客户端
+
+| 平台 | 安装包 | 系统要求 |
+| --- | --- | --- |
+| Windows | `.exe` | Windows 10 / 11（64 位） |
+| macOS | `.dmg` | macOS 14 及以上 |
+| Android | `.apk` | Android 8.0 及以上 |
+
+下载页会自动标出适合你当前设备的版本。版本信息读取自公开的 GitHub 发布库，
+历史版本也能在那里找到。
+
+## iPhone 和 iPad
+
+iOS App 还没有上架 App Store。现在的用法是打开网页版，
+在 Safari 里点「分享 › 添加到主屏幕」，之后它会像一个独立 App 一样运行。
+
+<Shot
+  id="clients-ios-pwa-01"
+  caption="Safari 的「添加到主屏幕」位置"
+  alt="iOS Safari 分享菜单中的添加到主屏幕选项"
+/>
+
+<Aside type="tip">
+网页版本身功能完整，不装客户端也能用。客户端主要的差别是桌面通知和启动速度。
+</Aside>

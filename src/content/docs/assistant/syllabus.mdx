@@ -1,0 +1,76 @@
+---
+title: 上传 syllabus
+description: 支持的文件格式与大小、上传前提，以及 syllabus 的版本管理。
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+上传课程 syllabus 后，Assistant 会从里面整理出考试、作业和截止日期，
+生成一份**草稿**供你审核。
+
+<Aside type="caution">
+Assistant **不会直接修改你的日历**。所有条目都要你逐条确认后才会写入。
+见[审核草稿](/assistant/review/)。
+</Aside>
+
+## 前提
+
+上传的学期必须**已经有生效的课表**。没导入课表的学期无法上传 syllabus，
+因为 Assistant 需要课表来判断这门课是哪门、在哪个学期。
+
+## 支持的格式和大小
+
+| 项目 | 限制 |
+| --- | --- |
+| 格式 | PDF、DOCX、DOC、XLSX、TXT、MD、CSV |
+| 单个文件大小 | 8 MB 以内 |
+
+超出会直接被拒绝并提示。扫描版 PDF（纯图片、没有文字层）可能提取不出内容，
+这种情况建议换一份有文字的版本。
+
+## 上传步骤
+
+<Steps>
+
+1. **打开资料页，选择学期和课程。**
+
+2. **上传 syllabus 文件。**
+
+   <Shot
+     id="assistant-syllabus-01"
+     caption="syllabus 上传入口"
+     alt="RUFREE 资料页的 syllabus 上传界面"
+   />
+
+3. **等待分析。**
+
+   文件会经过「已上传 → 分析中 → 已分析」几个状态。
+   分析需要一点时间，可以先去做别的。
+
+   <Shot
+     id="assistant-syllabus-02"
+     caption="syllabus 的分析状态"
+     alt="RUFREE 显示 syllabus 文件的分析进度"
+   />
+
+4. **审核生成的草稿。**
+
+</Steps>
+
+## 版本
+
+同一门课可以上传多份 syllabus，它们按版本号排列。
+课程中途更新了 syllabus，直接传新的即可，旧版本会保留。
+
+重复上传**完全相同**的文件不会产生新版本。
+
+## 提取失败
+
+如果文件读不出文字，状态会停在失败并给出原因。常见情况：
+
+- 扫描件或纯图片 PDF
+- 文件加密、带密码
+- 格式损坏
+
+这种情况可以改用手动添加事件。

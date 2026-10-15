@@ -1,0 +1,72 @@
+---
+title: Calendar subscription links
+description: Subscribe to your RUFREE schedule from a calendar app, and how to handle the link safely.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+You can generate a subscription link that feeds your RUFREE schedule into Apple
+Calendar, Google Calendar, Outlook and similar apps, keeping them in sync.
+
+## Two scopes
+
+| Scope | Contents |
+| --- | --- |
+| Personal | Your own schedule |
+| Group | The schedules of members you pick from one group |
+
+A group link requires choosing the group first, then ticking which members to include.
+
+## Creating one
+
+<Steps>
+
+1. **Choose the scope and give the link a name.**
+
+2. **Optionally set an expiry.** Without one it lasts indefinitely. An expiry has to
+   be in the future.
+
+3. **Generate it.**
+
+   <Aside type="danger" title="The link is shown once">
+   Copy it immediately. RUFREE **does not store the link itself**, so it cannot be
+   shown again after you close the dialog. If you lose it, revoke it and make a new one.
+   </Aside>
+
+   <Shot
+     id="social-calendar-01"
+     caption="Generating a subscription link, shown only once"
+     alt="The interface for generating a calendar subscription link in RUFREE"
+   />
+
+4. **Add the address to your calendar app.**
+
+</Steps>
+
+## Handling it safely
+
+<Aside type="caution">
+**Anyone with the link can read that schedule without signing in to RUFREE.**
+
+- Keep it out of public places, including public bug reports
+- Revoke it the moment you suspect it leaked
+- Generate separate links for separate purposes, so one problem means revoking one link
+- Set an expiry for anything temporary
+</Aside>
+
+## Revoking
+
+A link can be revoked at any time. Calendar apps subscribed to it get nothing on
+their next refresh.
+
+<Shot
+  id="social-calendar-02"
+  caption="Existing subscription links and revoking one"
+  alt="The management list for RUFREE calendar subscription links"
+/>
+
+## How often it updates
+
+That is up to your calendar app, not RUFREE. Most clients refresh only every few
+hours, so a timetable change will not appear immediately.

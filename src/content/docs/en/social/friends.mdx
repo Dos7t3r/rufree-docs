@@ -1,0 +1,44 @@
+---
+title: Adding friends
+description: Finding classmates, what friends can see, and how to stay unsearchable.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+## Finding people
+
+Search by username. Everyone's profile lives at `/people/<username>`.
+
+<Aside type="note">
+Only people who have "discoverable" switched on appear in search. It is on by
+default — turn it off to stay hidden. See [Visibility settings](/en/privacy/visibility/).
+</Aside>
+
+<Shot
+  id="social-friends-01"
+  caption="Searching for and adding a friend"
+  alt="The people search interface in RUFREE"
+/>
+
+## What friends can see
+
+Two layers decide this together:
+
+1. **Each event's visibility** — only events marked "Friends" show details to friends
+2. **Account-level switches** — whether course details, location and live status show at all
+
+They combine as AND: an event marked "Friends" still shows only as busy if you have
+turned course details off.
+
+<Shot
+  id="social-friends-02"
+  caption="A friend's timetable as you see it"
+  alt="Viewing a friend's timetable in RUFREE"
+/>
+
+## Shared free time
+
+Once you are friends you can see the free time you have in common. This uses only
+the busy/free layer, so **it still works when every event is set to "Busy" with no
+details.**

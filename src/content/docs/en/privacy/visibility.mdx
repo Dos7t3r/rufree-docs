@@ -1,0 +1,84 @@
+---
+title: Visibility settings
+description: The two layers that control who sees what in RUFREE, and how they combine.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+This is the page worth two minutes of your time.
+
+## Two layers
+
+Visibility in RUFREE is decided by two layers together:
+
+```
+Layer 1: each event's visibility (Private / Busy / Friends / Groups)
+            ↓ AND
+Layer 2: account switches (course details, location, live status, …)
+            ↓
+        what the other person actually sees
+```
+
+They combine as AND — **either layer can hold something back.**
+
+## Layer 1: event visibility
+
+| Visibility | Effect |
+| --- | --- |
+| Private | Hidden entirely; the time does not even count as busy |
+| Busy | Shows as "busy" with no details |
+| Friends | Friends see the details |
+| Groups | Group members see the details |
+
+New events take your account's **default visibility**. Changing that default does
+**not** apply to events that already exist.
+
+<Shot
+  id="privacy-visibility-01"
+  caption="Visibility for a single event"
+  alt="The visibility options for a RUFREE event"
+/>
+
+## Layer 2: account switches
+
+| Switch | Controls |
+| --- | --- |
+| Show course details | With this off, even a "Friends" event shows only as busy |
+| Show location | Whether rooms and locations are visible |
+| Show live status | Whether others can see that you are in class right now |
+| Discoverable | With this off, you do not appear in search |
+| Show courses to non-friends | Whether people who are not friends can see your courses |
+
+<Shot
+  id="privacy-visibility-02"
+  caption="The privacy switches in settings"
+  alt="The privacy options on the RUFREE settings page"
+/>
+
+## Common situations
+
+**Share free time without revealing what I study**
+→ Set events to "Busy", or turn off "Show course details". Shared free time still works.
+
+**Only the project team, not all my friends**
+→ Mark those events "Groups", not "Friends".
+
+**Do not let anyone find me**
+→ Turn off "Discoverable".
+
+**A few classes are personal**
+→ Mark just those events "Private" and leave the rest alone.
+
+<Aside type="caution">
+Before you share, confirm the result from the other side rather than trusting the
+settings page alone.
+</Aside>
+
+## Shared free time is the exception
+
+It reads only busy/free, never details, so setting everything to "Busy" does not
+affect it.
+
+The one catch is "Private": private events **do not** count as busy, so others may
+treat that time as free.

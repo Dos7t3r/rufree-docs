@@ -1,0 +1,74 @@
+---
+title: 订阅课程通知
+description: 贴入 Quercus 课程通知的 RSS 链接，让 RUFREE 替你盯着课程公告。
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+订阅之后，RUFREE 会定期读取这门课的 Quercus 通知（Announcements），
+并尝试从里面找出考试时间和考场，写进你的日历。
+
+## 前提
+
+这门课必须在你**当前生效的课表**里。没有导入课表、或者课表里没这门课，是没法订阅的。
+
+## 怎么拿到链接
+
+<Steps>
+
+1. **在 Quercus 打开这门课的 Announcements 页面。**
+
+2. **找到页面上的 RSS / Feed 链接，复制它。**
+
+   链接形如：
+
+   ```
+   https://q.utoronto.ca/feeds/announcements/enrollment_XXXXXXXX.atom
+   ```
+
+   <Shot
+     id="feeds-subscribe-01"
+     caption="Quercus 通知页面上 RSS 链接的位置"
+     alt="Quercus 课程通知页面的 RSS 订阅链接"
+   />
+
+3. **在 RUFREE 里打开这门课，把链接贴进去，先点预览。**
+
+   预览会读取一次 Quercus，然后告诉你：课程代码、section、学期、通知总数，
+   以及其中有多少条看起来和考试相关。这一步是让你确认**没贴错课**。
+
+   <Shot
+     id="feeds-subscribe-02"
+     caption="订阅前的预览结果"
+     alt="RUFREE 显示 Quercus 订阅链接的预览信息"
+   />
+
+4. **确认无误后保存。**
+
+   保存后 RUFREE 会立刻开始读取通知并查找考试信息。
+
+</Steps>
+
+<Aside type="caution" title="这个链接是私人的">
+Quercus 的 feed 链接里带有你的个人令牌，**拿到链接的人就能读到这门课的通知**。
+不要把它贴在公开场合（包括公开的问题反馈里）。
+</Aside>
+
+## 链接格式不对怎么办
+
+RUFREE 只接受上面那个格式的 Quercus 通知链接。常见错误：
+
+- 复制成了课程主页地址，而不是 feed 地址
+- 复制成了日历 feed（`.ics`），那是另一回事
+- 链接被截断
+
+## 频率限制
+
+每人每分钟最多 8 次预览或保存。频繁试错会被暂时拦住，等一会儿再试即可。
+
+## 手动刷新和移除
+
+订阅后 RUFREE 会自动定期检查，你也可以手动点刷新。
+
+移除订阅时会提示：**由这个订阅更新过的考试时间，会恢复成 syllabus 或 ACORN 的时间。**

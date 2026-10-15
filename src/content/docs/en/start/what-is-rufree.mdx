@@ -1,0 +1,49 @@
+---
+title: What is RUFREE
+description: Who RUFREE is for, which campuses it covers, and how the features depend on each other.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+RUFREE turns your timetable into something you can share. Once it is imported you can
+find free time you share with friends, subscribe to course announcements, and let
+Assistant pull exams and assignments out of a syllabus as a draft.
+
+<Aside type="caution" title="Not an official service">
+RUFREE is an independent project and does not represent the University of Toronto.
+Your school's official channels are authoritative for timetables, announcements and
+exams. What RUFREE reads can lag behind or be parsed incorrectly, so check important
+dates yourself.
+</Aside>
+
+## Who it is for
+
+The focus is life at the University of Toronto, across three campuses:
+
+- St. George (`uoft-st-george`)
+- Mississauga / UTM (`uoft-utm`)
+- Scarborough / UTSC (`uoft-utsc`)
+
+Your campus is set in your profile and determines which terms you see.
+
+## How the features depend on each other
+
+Some features have an order to them, and skipping a step means the next one cannot work:
+
+```
+Import your timetable (.ics)
+   ├── Shared free time / group sharing
+   ├── Calendar subscription links (export back to your own calendar app)
+   ├── Course feed subscriptions ── needs the course in your active timetable
+   └── Syllabus upload ── needs an active timetable for that term
+          └── Assistant drafts ── reach your calendar only after you approve them
+                 └── Automatic exam updates ── need both a syllabus exam and a feed
+```
+
+In short: **import your timetable first.**
+
+## Time zone
+
+Your account has its own time zone, `America/Toronto` by default, and every time in
+the calendar is rendered in it. Opening RUFREE from somewhere else does not change
+that — so check the times right after importing.

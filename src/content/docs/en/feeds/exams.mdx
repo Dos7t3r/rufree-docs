@@ -1,0 +1,72 @@
+---
+title: Exam times and rooms
+description: How RUFREE finds exam details in announcements, and what each outcome means.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+With a course feed subscribed, RUFREE checks new posts for exam times and rooms and
+updates the matching exam in your calendar.
+
+<Aside type="caution">
+This is a **convenience**, not a replacement for your school's official exam
+schedule. Treat the official time and room as authoritative.
+</Aside>
+
+## What it needs
+
+For an automatic update you need both:
+
+1. an exam already in your syllabus for that course (see [Uploading a syllabus](/en/assistant/syllabus/))
+2. a course feed subscribed for that course
+
+Times found in posts are matched against syllabus exams; no match, no update.
+
+## What each outcome means
+
+After each check RUFREE lists what it did with every post.
+
+| Outcome | Meaning |
+| --- | --- |
+| Time announced; updated | Found a time you did not have, and wrote it in |
+| Time changed; updated and notified | Differs from what you had; updated and notified you |
+| Room or length updated | Same time, corrected or added room or duration |
+| Matches what you have | The post agrees with your existing time |
+| You undid this one; not reused | You reverted this before, so it is not applied again |
+| Older than the one in use; ignored | A newer post already took effect |
+
+### When it skips
+
+| Outcome | Meaning |
+| --- | --- |
+| For another section | The post is about a different section |
+| No matching syllabus exam | Nothing to attach it to |
+| AI was unsure | Confidence too low to risk writing |
+| Quote not found in the post | Could not verify it against the original text |
+| No exact time | The post mentions the exam but gives no time |
+| Date outside the term | Falls outside the term range |
+| Implausible end time | The duration does not make sense |
+| Section unclear | Could not tell which section it refers to |
+
+<Shot
+  id="feeds-exams-01"
+  caption="Outcomes from one check"
+  alt="RUFREE showing the outcomes of a course feed check"
+/>
+
+## Undoing an update
+
+Any applied result can be undone. The exam reverts to its previous time and **that
+post will not be applied again**.
+
+## Surname for exam seating
+
+Some courses split exam rooms by surname. You can store one (up to 60 characters) and
+RUFREE uses it to work out which room is yours. Leaving it empty affects nothing else.
+
+<Shot
+  id="feeds-exams-02"
+  caption="The exam surname setting"
+  alt="The exam seating surname field in RUFREE"
+/>

@@ -1,0 +1,54 @@
+---
+title: Versions and terms
+description: Timetables are versioned per term, so you can compare before importing and switch back afterwards.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Every import creates a **new version** rather than overwriting the old one. Exactly
+one version per term is active at a time.
+
+## Why versions exist
+
+Timetables change constantly during add/drop. Versions let you:
+
+- see exactly what a new file would change before committing to it
+- save a version without activating it
+- go back if you activated the wrong one
+
+## Version states
+
+| State | Meaning |
+| --- | --- |
+| Active | The one in use. Shared free time, course feeds and syllabus all follow it. |
+| Archived | Saved but not in use; can be activated at any time. |
+
+<Shot
+  id="timetable-versions-01"
+  caption="The list of timetable versions for a term"
+  alt="RUFREE timetable version history"
+/>
+
+## Switching
+
+Pick an archived version and activate it. The switch replaces the term's imported
+classes wholesale.
+
+<Aside type="note">
+Switching affects **imported classes only**. Manual events are untouched.
+</Aside>
+
+## What a switch knocks on to
+
+The active version is what several features check against, so after switching:
+
+- **Course feed subscriptions** require the course to be in your active timetable.
+  If the new version no longer has that course, the subscription loses its basis.
+- **Syllabus uploads** require an active timetable for the term.
+
+<Shot
+  id="timetable-versions-02"
+  caption="Confirming the difference before switching"
+  alt="The difference shown when switching timetable versions"
+/>

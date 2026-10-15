@@ -1,0 +1,36 @@
+---
+title: Apps and clients
+description: The web app, the Windows, macOS and Android apps, and how to use RUFREE on iPhone.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Every client shares one account. A change you make on one shows up on the others.
+
+## Downloadable apps
+
+| Platform | Installer | Requirement |
+| --- | --- | --- |
+| Windows | `.exe` | Windows 10 / 11, 64-bit |
+| macOS | `.dmg` | macOS 14 or later |
+| Android | `.apk` | Android 8.0 or later |
+
+The download page highlights the build for the device you are on. Versions are read
+from the public GitHub releases, where you can also find past versions.
+
+## iPhone and iPad
+
+The iOS app is not on the App Store yet. For now, open the web app in Safari and
+choose **Share › Add to Home Screen**; it then behaves like a standalone app.
+
+<Shot
+  id="clients-ios-pwa-01"
+  caption="Add to Home Screen in Safari"
+  alt="The Add to Home Screen option in the iOS Safari share menu"
+/>
+
+<Aside type="tip">
+The web app is fully featured on its own. The native apps mainly add desktop
+notifications and faster startup.
+</Aside>

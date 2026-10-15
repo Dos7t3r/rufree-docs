@@ -1,0 +1,78 @@
+---
+title: Subscribing to a course feed
+description: Paste a Quercus Announcements RSS link and let RUFREE watch a course's posts for you.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+Once subscribed, RUFREE checks the course's Quercus Announcements regularly and tries
+to pull exam times and rooms out of them and into your calendar.
+
+## What you need first
+
+The course has to be in your **active timetable**. Without an imported timetable, or
+without that course in it, you cannot subscribe.
+
+## Getting the link
+
+<Steps>
+
+1. **Open the course's Announcements page in Quercus.**
+
+2. **Find and copy the RSS / feed link on that page.**
+
+   It looks like this:
+
+   ```
+   https://q.utoronto.ca/feeds/announcements/enrollment_XXXXXXXX.atom
+   ```
+
+   <Shot
+     id="feeds-subscribe-01"
+     caption="Where the RSS link sits on the Quercus Announcements page"
+     alt="The RSS subscription link on a Quercus course announcements page"
+   />
+
+3. **Paste it into the course in RUFREE and preview first.**
+
+   The preview reads Quercus once and reports the course code, section, term, how many
+   posts there are and how many look exam-related. It exists so you can confirm you
+   pasted **the right course**.
+
+   <Shot
+     id="feeds-subscribe-02"
+     caption="The preview shown before saving"
+     alt="RUFREE showing a preview of a Quercus feed link"
+   />
+
+4. **Save once it looks right.**
+
+   RUFREE starts reading posts and looking for exam details immediately.
+
+</Steps>
+
+<Aside type="caution" title="This link is personal">
+A Quercus feed link carries your own token — **anyone who has it can read that
+course's announcements**. Keep it out of public places, including public bug reports.
+</Aside>
+
+## When the link is rejected
+
+RUFREE only accepts the Quercus announcements format above. The usual mistakes:
+
+- copying the course home page address instead of the feed
+- copying the calendar feed (`.ics`), which is a different thing
+- a truncated link
+
+## Rate limit
+
+Up to 8 previews or saves per minute per person. Repeated attempts are held off
+briefly; wait a moment and try again.
+
+## Refreshing and removing
+
+RUFREE checks on its own schedule, and you can refresh by hand.
+
+Removing a subscription warns you that **exam times it set go back to the syllabus or
+ACORN time.**

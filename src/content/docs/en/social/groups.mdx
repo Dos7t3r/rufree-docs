@@ -1,0 +1,68 @@
+---
+title: Groups and shared free time
+description: Creating groups, inviting people, roles, and what joining actually exposes.
+---
+
+import Shot from '@/components/Shot.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+Groups are for sharing free time with a fixed set of people over time — a project
+team, a club, a friend group.
+
+## Roles
+
+| Role | Can do |
+| --- | --- |
+| Owner | Everything, including transferring ownership and deleting the group |
+| Admin | Invite people, handle join requests, manage members |
+| Member | See the free time shared in the group |
+
+Ownership can be transferred to someone else.
+
+<Shot
+  id="social-groups-01"
+  caption="Group members and their roles"
+  alt="The member management interface for a RUFREE group"
+/>
+
+## Two ways to add people
+
+### Direct invitation
+
+An owner or admin can invite an existing user. The invitation goes to that person and
+**only takes effect when they accept** — nobody is added without agreeing.
+
+Invitations expire, and a pending one can be cancelled.
+
+### Invite link
+
+Generate a link to send out. Whoever opens it sees a preview of the group — its name
+and members' avatars and display names — and decides whether to join.
+
+<Aside type="caution">
+Anyone holding an invite link can use it. Think about where you are sending it; if it
+goes astray, remove the person and generate a new link.
+</Aside>
+
+<Shot
+  id="social-groups-02"
+  caption="Invite links and pending invitations"
+  alt="The invitation management interface for a RUFREE group"
+/>
+
+## What joining exposes
+
+Group members can see events you marked with "Groups" visibility. Events marked
+Private, Busy or Friends do not become visible because you joined.
+
+<Aside type="note">
+Joining a group is not handing over your timetable. Each event's visibility still
+decides.
+</Aside>
+
+## Leaving and deleting
+
+- A member can leave at any time
+- The owner can delete the whole group
+
+Once you leave, your schedule is no longer visible to that group.
