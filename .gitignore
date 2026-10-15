@@ -3,3 +3,7 @@ node_modules/
 .astro/
 .DS_Store
 npm-debug.log*
+
+# Wrangler
+.wrangler/
+.dev.vars*

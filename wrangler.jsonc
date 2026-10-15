@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // This project is deployed as a Cloudflare Worker serving static assets only.
+  //
+  // The file has to exist: without it, `wrangler deploy` runs its interactive
+  // auto-configuration, answers its own prompts in CI, and runs `astro add cloudflare`.
+  // That installs the SSR adapter and rewrites astro.config.mjs, and the rebuild then
+  // fails resolving satteri's wasm binding. Astro builds this site to plain HTML, so
+  // there is no Worker script and no adapter — just files.
+  "name": "rufree-docs",
+  "compatibility_date": "2026-10-15",
+  "assets": {
+    "directory": "./dist/",
+    // Starlight emits its own 404.html (src/content/docs/404.md).
+    "not_found_handling": "404-page",
+    // Starlight's URLs end in a slash, e.g. /feeds/subscribe/.
+    "html_handling": "auto-trailing-slash"
+  }
+}
