@@ -4,7 +4,14 @@ description: Creating groups, inviting people, roles, and what joining actually 
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialGroups01Img from '@/assets/social-groups-01.png';
+import socialGroups02Img from '@/assets/social-groups-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Groups are for sharing free time with a fixed set of people over time — a project
 team, a club, a friend group.
@@ -21,6 +28,7 @@ Ownership can be transferred to someone else.
 
 <Shot
   id="social-groups-01"
+  src={socialGroups01Img}
   caption="Group members and their roles"
   alt="The member management interface for a RUFREE group"
 />
@@ -46,6 +54,7 @@ goes astray, remove the person and generate a new link.
 
 <Shot
   id="social-groups-02"
+  src={socialGroups02Img}
   caption="Invite links and pending invitations"
   alt="The invitation management interface for a RUFREE group"
 />

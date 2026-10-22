@@ -4,6 +4,8 @@ description: RUFREE 里的五类事件、它们从哪来，以及每个事件独
 ---
 
 import Shot from '@/components/Shot.astro';
+import timetableEvents01Img from '@/assets/timetable-events-01.png';
+import timetableEvents02Img from '@/assets/timetable-events-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 ## 五种分类
@@ -22,6 +24,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="timetable-events-01"
+  src={timetableEvents01Img}
   caption="日历中不同分类的事件"
   alt="RUFREE 日历视图，显示课程、考试和个人事件"
 />
@@ -47,6 +50,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="timetable-events-02"
+  src={timetableEvents02Img}
   caption="单个事件的可见性选择"
   alt="事件编辑面板中的可见性选项"
 />

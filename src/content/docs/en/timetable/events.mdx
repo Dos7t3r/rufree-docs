@@ -4,7 +4,14 @@ description: The five kinds of event, where each comes from, and the visibility 
 ---
 
 import Shot from '@/components/Shot.astro';
+import timetableEvents01Img from '@/assets/timetable-events-01.png';
+import timetableEvents02Img from '@/assets/timetable-events-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 ## Five categories
 
@@ -23,6 +30,7 @@ Without an explicit category, RUFREE infers one from the source: manual events b
 
 <Shot
   id="timetable-events-01"
+  src={timetableEvents01Img}
   caption="Different event categories in the calendar"
   alt="RUFREE calendar showing classes, exams and personal events"
 />
@@ -48,6 +56,7 @@ private you have to change it on the timetable, not just flip the default.
 
 <Shot
   id="timetable-events-02"
+  src={timetableEvents02Img}
   caption="Choosing visibility for a single event"
   alt="The visibility options in the event editing panel"
 />

@@ -4,7 +4,13 @@ description: The web app, the Windows, macOS and Android apps, and how to use RU
 ---
 
 import Shot from '@/components/Shot.astro';
+import clientsIosPwa01Img from '@/assets/clients-ios-pwa-01.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Every client shares one account. A change you make on one shows up on the others.
 
@@ -26,6 +32,7 @@ choose **Share › Add to Home Screen**; it then behaves like a standalone app.
 
 <Shot
   id="clients-ios-pwa-01"
+  src={clientsIosPwa01Img}
   caption="Add to Home Screen in Safari"
   alt="The Add to Home Screen option in the iOS Safari share menu"
 />

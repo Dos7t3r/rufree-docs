@@ -4,7 +4,14 @@ description: Where uploaded materials live, who can see them, and the storage li
 ---
 
 import Shot from '@/components/Shot.astro';
+import assistantMaterials01Img from '@/assets/assistant-materials-01.png';
+import assistantMaterials02Img from '@/assets/assistant-materials-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Besides syllabi you can upload other course materials and then ask questions about
 them.
@@ -23,6 +30,7 @@ such as an assignment with your name and student number on it.
 
 <Shot
   id="assistant-materials-01"
+  src={assistantMaterials01Img}
   caption="The materials list and sharing state"
   alt="The file list in the RUFREE course materials library"
 />
@@ -39,6 +47,7 @@ it for your classmates.
 
 <Shot
   id="assistant-materials-02"
+  src={assistantMaterials02Img}
   caption="Asking a question about course materials"
   alt="The question-and-answer interface over course materials in RUFREE"
 />

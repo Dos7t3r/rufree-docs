@@ -4,6 +4,7 @@ description: 支持的文件格式与大小、上传前提，以及 syllabus 的
 ---
 
 import Shot from '@/components/Shot.astro';
+import assistantSyllabus01Img from '@/assets/assistant-syllabus-01.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
 
 上传课程 syllabus 后，Assistant 会从里面整理出考试、作业和截止日期，
@@ -39,6 +40,7 @@ Assistant **不会直接修改你的日历**。所有条目都要你逐条确认
 
    <Shot
      id="assistant-syllabus-01"
+     src={assistantSyllabus01Img}
      caption="syllabus 上传入口"
      alt="RUFREE 资料页的 syllabus 上传界面"
    />

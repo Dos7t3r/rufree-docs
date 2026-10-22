@@ -4,7 +4,14 @@ description: The two layers that control who sees what in RUFREE, and how they c
 ---
 
 import Shot from '@/components/Shot.astro';
+import privacyVisibility01Img from '@/assets/privacy-visibility-01.png';
+import privacyVisibility02Img from '@/assets/privacy-visibility-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 This is the page worth two minutes of your time.
 
@@ -36,6 +43,7 @@ New events take your account's **default visibility**. Changing that default doe
 
 <Shot
   id="privacy-visibility-01"
+  src={privacyVisibility01Img}
   caption="Visibility for a single event"
   alt="The visibility options for a RUFREE event"
 />
@@ -52,6 +60,7 @@ New events take your account's **default visibility**. Changing that default doe
 
 <Shot
   id="privacy-visibility-02"
+  src={privacyVisibility02Img}
   caption="The privacy switches in settings"
   alt="The privacy options on the RUFREE settings page"
 />

@@ -4,6 +4,8 @@ description: 把你订阅的课程通知共享给同课同学，以及这会公�
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsSharing01Img from '@/assets/feeds-sharing-01.png';
+import feedsSharing02Img from '@/assets/feeds-sharing-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 一门课往往只需要一个人订阅，其他同学就能受益。共享是**可选**的，默认关闭。
@@ -28,6 +30,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="feeds-sharing-01"
+  src={feedsSharing01Img}
   caption="订阅时的两个共享开关"
   alt="RUFREE 课程通知订阅的共享选项"
 />
@@ -39,6 +42,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="feeds-sharing-02"
+  src={feedsSharing02Img}
   caption="同学共享过来的课程通知"
   alt="RUFREE 显示同学共享的课程通知来源"
 />

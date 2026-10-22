@@ -4,6 +4,8 @@ description: Assistant 生成的条目需要你逐条确认才会进入日历。
 ---
 
 import Shot from '@/components/Shot.astro';
+import assistantReview01Img from '@/assets/assistant-review-01.png';
+import assistantReview02Img from '@/assets/assistant-review-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 这是整个 Assistant 流程里最重要的一步。
@@ -29,6 +31,7 @@ Assistant 从 syllabus 里读到的所有内容都是**草稿**。
 
 <Shot
   id="assistant-review-01"
+  src={assistantReview01Img}
   caption="待审核的草稿列表，每条都附带 syllabus 原文出处"
   alt="RUFREE 显示 Assistant 从 syllabus 生成的待审核条目"
 />
@@ -43,6 +46,7 @@ Assistant 从 syllabus 里读到的所有内容都是**草稿**。
 
 <Shot
   id="assistant-review-02"
+  src={assistantReview02Img}
   caption="单条草稿的确认与修改"
   alt="RUFREE 草稿条目的编辑和确认界面"
 />

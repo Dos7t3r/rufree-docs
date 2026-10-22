@@ -4,7 +4,13 @@ description: Supported formats and size, what you need first, and how syllabus v
 ---
 
 import Shot from '@/components/Shot.astro';
+import assistantSyllabus01Img from '@/assets/assistant-syllabus-01.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Upload a course syllabus and Assistant pulls out exams, assignments and deadlines as
 a **draft** for you to review.
@@ -39,6 +45,7 @@ nothing — use a text-based version if you have one.
 
    <Shot
      id="assistant-syllabus-01"
+     src={assistantSyllabus01Img}
      caption="The syllabus upload entry point"
      alt="The syllabus upload interface on the RUFREE materials page"
    />

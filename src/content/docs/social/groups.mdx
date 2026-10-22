@@ -4,6 +4,8 @@ description: 建群、邀请成员、成员角色，以及加入群组意味着�
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialGroups01Img from '@/assets/social-groups-01.png';
+import socialGroups02Img from '@/assets/social-groups-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 群组用来和一组固定的人（小组作业、社团、朋友圈）长期共享空闲时间。
@@ -20,6 +22,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="social-groups-01"
+  src={socialGroups01Img}
   caption="群组成员列表与角色"
   alt="RUFREE 群组的成员管理界面"
 />
@@ -45,6 +48,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="social-groups-02"
+  src={socialGroups02Img}
   caption="邀请链接与待处理的邀请"
   alt="RUFREE 群组的邀请管理界面"
 />

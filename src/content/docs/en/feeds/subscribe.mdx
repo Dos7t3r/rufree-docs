@@ -4,7 +4,14 @@ description: Paste a Quercus Announcements RSS link and let RUFREE watch a cours
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsSubscribe01Img from '@/assets/feeds-subscribe-01.png';
+import feedsSubscribe02Img from '@/assets/feeds-subscribe-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Once subscribed, RUFREE checks the course's Quercus Announcements regularly and tries
 to pull exam times and rooms out of them and into your calendar.
@@ -30,6 +37,7 @@ without that course in it, you cannot subscribe.
 
    <Shot
      id="feeds-subscribe-01"
+     src={feedsSubscribe01Img}
      caption="Where the RSS link sits on the Quercus Announcements page"
      alt="The RSS subscription link on a Quercus course announcements page"
    />
@@ -42,6 +50,7 @@ without that course in it, you cannot subscribe.
 
    <Shot
      id="feeds-subscribe-02"
+     src={feedsSubscribe02Img}
      caption="The preview shown before saving"
      alt="RUFREE showing a preview of a Quercus feed link"
    />

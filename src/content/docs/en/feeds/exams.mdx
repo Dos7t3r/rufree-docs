@@ -4,7 +4,14 @@ description: How RUFREE finds exam details in announcements, and what each outco
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsExams01Img from '@/assets/feeds-exams-01.png';
+import feedsExams02Img from '@/assets/feeds-exams-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 With a course feed subscribed, RUFREE checks new posts for exam times and rooms and
 updates the matching exam in your calendar.
@@ -51,6 +58,7 @@ After each check RUFREE lists what it did with every post.
 
 <Shot
   id="feeds-exams-01"
+  src={feedsExams01Img}
   caption="Outcomes from one check"
   alt="RUFREE showing the outcomes of a course feed check"
 />
@@ -67,6 +75,7 @@ RUFREE uses it to work out which room is yours. Leaving it empty affects nothing
 
 <Shot
   id="feeds-exams-02"
+  src={feedsExams02Img}
   caption="The exam surname setting"
   alt="The exam seating surname field in RUFREE"
 />
