@@ -4,6 +4,7 @@ description: 从学校课表系统导出 .ics 并导入 RUFREE，以及导入后
 ---
 
 import Shot from '@/components/Shot.astro';
+import timetableImport01Img from '@/assets/timetable-import-01.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
 
 课表是 RUFREE 的基础。共同空闲、课程通知订阅、syllabus 分析都依赖它。
@@ -16,6 +17,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
    <Shot
      id="timetable-import-01"
+     src={timetableImport01Img}
      caption="学校课表系统里导出 .ics 的位置"
      alt="学校课表系统的日历导出按钮"
    />

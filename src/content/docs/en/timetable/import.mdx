@@ -4,7 +4,13 @@ description: Export an .ics file from your school's schedule system, import it, 
 ---
 
 import Shot from '@/components/Shot.astro';
+import timetableImport01Img from '@/assets/timetable-import-01.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Your timetable is the foundation. Shared free time, course feeds and syllabus
 analysis all depend on it.
@@ -17,6 +23,7 @@ analysis all depend on it.
 
    <Shot
      id="timetable-import-01"
+     src={timetableImport01Img}
      caption="Where to export .ics in the school's schedule system"
      alt="The calendar export button in the school's schedule system"
    />

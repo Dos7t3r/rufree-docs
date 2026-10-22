@@ -4,6 +4,8 @@ description: 上传的课程资料存在哪里、谁能看到，以及容量限�
 ---
 
 import Shot from '@/components/Shot.astro';
+import assistantMaterials01Img from '@/assets/assistant-materials-01.png';
+import assistantMaterials02Img from '@/assets/assistant-materials-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 除了 syllabus，你还可以上传其他课程资料，之后可以针对这些内容提问。
@@ -22,6 +24,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="assistant-materials-01"
+  src={assistantMaterials01Img}
   caption="资料库列表与共享状态"
   alt="RUFREE 课程资料库的文件列表"
 />
@@ -37,6 +40,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="assistant-materials-02"
+  src={assistantMaterials02Img}
   caption="针对课程资料提问"
   alt="RUFREE 中基于课程资料的问答界面"
 />

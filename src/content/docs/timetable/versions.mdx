@@ -4,6 +4,7 @@ description: 课表按学期保存多个版本，可以随时切换生效版本�
 ---
 
 import Shot from '@/components/Shot.astro';
+import timetableVersions01Img from '@/assets/timetable-versions-01.png';
 import { Aside } from '@astrojs/starlight/components';
 
 每次导入课表都会生成一个**新版本**，旧版本不会被覆盖。
@@ -26,6 +27,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="timetable-versions-01"
+  src={timetableVersions01Img}
   caption="某个学期的课表版本列表"
   alt="RUFREE 课表版本历史列表"
 />

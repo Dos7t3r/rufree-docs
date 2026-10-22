@@ -4,6 +4,8 @@ description: 把 RUFREE 的课表订阅到系统日历，以及这个链接的�
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialCalendar01Img from '@/assets/social-calendar-01.png';
+import socialCalendar02Img from '@/assets/social-calendar-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
 
 你可以生成一个订阅链接，把 RUFREE 的日程接到 Apple 日历、Google 日历、
@@ -35,6 +37,7 @@ Outlook 这类应用里，让它们自动保持同步。
 
    <Shot
      id="social-calendar-01"
+     src={socialCalendar01Img}
      caption="生成订阅链接，注意只显示一次"
      alt="RUFREE 生成日历订阅链接的界面"
    />
@@ -60,6 +63,7 @@ Outlook 这类应用里，让它们自动保持同步。
 
 <Shot
   id="social-calendar-02"
+  src={socialCalendar02Img}
   caption="已有订阅链接的列表与作废操作"
   alt="RUFREE 日历订阅链接的管理列表"
 />

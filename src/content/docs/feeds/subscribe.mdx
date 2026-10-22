@@ -4,6 +4,8 @@ description: 贴入 Quercus 课程通知的 RSS 链接，让 RUFREE 替你盯着
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsSubscribe01Img from '@/assets/feeds-subscribe-01.png';
+import feedsSubscribe02Img from '@/assets/feeds-subscribe-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
 
 订阅之后，RUFREE 会定期读取这门课的 Quercus 通知（Announcements），
@@ -29,6 +31,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
    <Shot
      id="feeds-subscribe-01"
+     src={feedsSubscribe01Img}
      caption="Quercus 通知页面上 RSS 链接的位置"
      alt="Quercus 课程通知页面的 RSS 订阅链接"
    />
@@ -40,6 +43,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
    <Shot
      id="feeds-subscribe-02"
+     src={feedsSubscribe02Img}
      caption="订阅前的预览结果"
      alt="RUFREE 显示 Quercus 订阅链接的预览信息"
    />

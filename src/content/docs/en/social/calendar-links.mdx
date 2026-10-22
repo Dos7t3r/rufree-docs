@@ -4,7 +4,14 @@ description: Subscribe to your RUFREE schedule from a calendar app, and how to h
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialCalendar01Img from '@/assets/social-calendar-01.png';
+import socialCalendar02Img from '@/assets/social-calendar-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 You can generate a subscription link that feeds your RUFREE schedule into Apple
 Calendar, Google Calendar, Outlook and similar apps, keeping them in sync.
@@ -36,6 +43,7 @@ A group link requires choosing the group first, then ticking which members to in
 
    <Shot
      id="social-calendar-01"
+     src={socialCalendar01Img}
      caption="Generating a subscription link, shown only once"
      alt="The interface for generating a calendar subscription link in RUFREE"
    />
@@ -62,6 +70,7 @@ their next refresh.
 
 <Shot
   id="social-calendar-02"
+  src={socialCalendar02Img}
   caption="Existing subscription links and revoking one"
   alt="The management list for RUFREE calendar subscription links"
 />

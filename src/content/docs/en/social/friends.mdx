@@ -4,7 +4,14 @@ description: Finding and adding classmates, what friends can see, and the per-fr
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialFriends01Img from '@/assets/social-friends-01.png';
+import socialFriends02Img from '@/assets/social-friends-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 ## Finding people
 
@@ -35,6 +42,7 @@ turn it off to stay hidden. See [Visibility settings](/en/privacy/visibility/).
 
 <Shot
   id="social-friends-01"
+  src={socialFriends01Img}
   caption="Searching for someone and sending a friend request"
   alt="The people search and add-friend interface in RUFREE"
 />
@@ -51,6 +59,7 @@ turned course details off.
 
 <Shot
   id="social-friends-02"
+  src={socialFriends02Img}
   caption="A friend's timetable as you see it"
   alt="Viewing a friend's timetable in RUFREE"
 />

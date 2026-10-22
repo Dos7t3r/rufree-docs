@@ -4,6 +4,8 @@ description: RUFREE 里控制「谁能看到什么」的两层设置，以及它
 ---
 
 import Shot from '@/components/Shot.astro';
+import privacyVisibility01Img from '@/assets/privacy-visibility-01.png';
+import privacyVisibility02Img from '@/assets/privacy-visibility-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 这是最值得花两分钟读完的一页。
@@ -35,6 +37,7 @@ RUFREE 的可见性由两层共同决定：
 
 <Shot
   id="privacy-visibility-01"
+  src={privacyVisibility01Img}
   caption="单个事件的可见性设置"
   alt="RUFREE 事件的可见性选项"
 />
@@ -51,6 +54,7 @@ RUFREE 的可见性由两层共同决定：
 
 <Shot
   id="privacy-visibility-02"
+  src={privacyVisibility02Img}
   caption="设置页中的隐私开关"
   alt="RUFREE 设置页的隐私选项"
 />

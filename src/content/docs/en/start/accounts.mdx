@@ -4,7 +4,13 @@ description: Username rules, how signing in works, and which profile fields othe
 ---
 
 import Shot from '@/components/Shot.astro';
+import accountProfile01Img from '@/assets/account-profile-01.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 ## Usernames
 
@@ -32,6 +38,7 @@ you can be found by search at all.
 
 <Shot
   id="account-profile-01"
+  src={accountProfile01Img}
   caption="The profile page, and where username and campus are set"
   alt="RUFREE profile settings page"
 />

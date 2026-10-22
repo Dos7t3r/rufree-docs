@@ -4,6 +4,8 @@ description: RUFREE 如何从课程通知里找出考试时间，以及每种处
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsExams01Img from '@/assets/feeds-exams-01.png';
+import feedsExams02Img from '@/assets/feeds-exams-02.png';
 import { Aside } from '@astrojs/starlight/components';
 
 订阅课程通知后，RUFREE 会检查新通知里有没有考试时间或考场信息。
@@ -50,6 +52,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="feeds-exams-01"
+  src={feedsExams01Img}
   caption="一次检查后的处理结果列表"
   alt="RUFREE 显示课程通知检查的处理结果"
 />
@@ -66,6 +69,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Shot
   id="feeds-exams-02"
+  src={feedsExams02Img}
   caption="考试姓氏设置"
   alt="RUFREE 中设置考试座位姓氏的输入框"
 />

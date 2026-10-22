@@ -1,11 +1,32 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import sitemap from "@astrojs/sitemap";
+import { copyFile } from "node:fs/promises";
+
+// Starlight adds a sitemap only when none is configured, and @astrojs/sitemap always
+// writes sitemap-index.xml. Crawlers request /sitemap.xml, so copy the index there.
+// This hook is listed after sitemap() so it runs once the index exists.
+const sitemapAtRoot = {
+  name: "sitemap-at-root",
+  hooks: {
+    "astro:build:done": async (/** @type {{ dir: URL }} */ { dir }) => {
+      await copyFile(new URL("sitemap-index.xml", dir), new URL("sitemap.xml", dir));
+    },
+  },
+};
 
 // docs.rufree.app — RUFREE 使用手册 / RUFREE user guide
 export default defineConfig({
   site: "https://docs.rufree.app",
   integrations: [
+    // Same i18n mapping Starlight would generate, so the sitemap lists both languages.
+    sitemap({
+      i18n: {
+        defaultLocale: "root",
+        locales: { root: "zh-CN", en: "en" },
+      },
+    }),
     starlight({
       title: { "zh-CN": "RUFREE 使用手册", en: "RUFREE Docs" },
       defaultLocale: "root",
@@ -76,5 +97,6 @@ export default defineConfig({
         },
       ],
     }),
+    sitemapAtRoot,
   ],
 });

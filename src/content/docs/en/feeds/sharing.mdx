@@ -4,7 +4,14 @@ description: Share a course feed with classmates in the same course, and what th
 ---
 
 import Shot from '@/components/Shot.astro';
+import feedsSharing01Img from '@/assets/feeds-sharing-01.png';
+import feedsSharing02Img from '@/assets/feeds-sharing-02.png';
 import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+Sorry: the screenshots on this page show the Chinese version of the app. English screenshots are not available yet.
+</Aside>
+
 
 Usually one person per course needs to subscribe for everyone to benefit. Sharing is
 **optional and off by default**.
@@ -31,6 +38,7 @@ the posts without knowing who supplied them.
 
 <Shot
   id="feeds-sharing-01"
+  src={feedsSharing01Img}
   caption="The two sharing switches"
   alt="The sharing options for a RUFREE course feed subscription"
 />
@@ -43,6 +51,7 @@ many posts there are, and when it last updated.
 
 <Shot
   id="feeds-sharing-02"
+  src={feedsSharing02Img}
   caption="A course feed shared by a classmate"
   alt="RUFREE showing a course feed shared by a classmate"
 />

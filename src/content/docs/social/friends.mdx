@@ -4,6 +4,8 @@ description: 怎么找到并添加同学、好友能看到什么，以及备注�
 ---
 
 import Shot from '@/components/Shot.astro';
+import socialFriends01Img from '@/assets/social-friends-01.png';
+import socialFriends02Img from '@/assets/social-friends-02.png';
 import { Aside, Steps } from '@astrojs/starlight/components';
 
 ## 找到同学
@@ -34,6 +36,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 <Shot
   id="social-friends-01"
+  src={socialFriends01Img}
   caption="搜索用户并发起好友申请"
   alt="RUFREE 的用户搜索与添加好友界面"
 />
@@ -50,6 +53,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 
 <Shot
   id="social-friends-02"
+  src={socialFriends02Img}
   caption="好友视角下看到的课表"
   alt="RUFREE 中查看好友课表的视图"
 />
